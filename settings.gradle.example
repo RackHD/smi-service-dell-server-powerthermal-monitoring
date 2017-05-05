@@ -1,0 +1,6 @@
+include ':commons-model'
+include ':adapter-server'
+include ':wsmanlib'
+project(':commons-model').projectDir = new File (settingsDir, '../commons-model')
+project(':adapter-server').projectDir = new File (settingsDir, '../adapter-server')
+project(':wsmanlib').projectDir = new File (settingsDir, '../wsmanlib')

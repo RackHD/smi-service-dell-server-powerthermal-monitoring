@@ -1,0 +1,32 @@
+server:
+    port: 46019
+---
+
+spring:
+  profiles: default
+  application:
+    name: POWER-THERMAL-MONITORING
+  cloud:
+    bus:
+      enabled: false
+    consul:
+      enabled: false
+      config:
+        enabled: false
+---
+
+spring:
+  profiles: consul
+  application:
+    name: POWER-THERMAL-MONITORING
+  cloud:
+    consul:
+      enabled: true
+      host: service-registry
+      port: 8500
+      config:
+        prefix: config
+        profileSeparator: '::'
+        format: YAML
+        data-key: data
+        fail-fast: true
