@@ -6,9 +6,14 @@
  */
 package com.dell.isg.aps.powerthermal.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.dell.isg.aps.powerthermal.common.BasePowerThermalRequest;
+import com.dell.isg.aps.powerthermal.common.HwMonitoringAgg;
+import com.dell.isg.aps.powerthermal.common.SetPowerThermalAggRequest;
 import com.dell.isg.aps.powerthermal.common.SetPowerThermalRequest;
 import com.dell.isg.aps.powerthermal.infrastructure.IPowerThermalInfrastructure;
 import com.dell.isg.aps.commons.model.server.JobStatus;
@@ -37,5 +42,26 @@ public class PowerThermalServiceImpl implements IPowerThermalService {
     public JobStatus setPowerThermalCapping(SetPowerThermalRequest request) throws Exception {
         return powerThermalInfrastructure.setPowerThermalCapping(request);
     }
+
+
+	@Override
+	public HwMonitoringAgg collectPowerThermalAll(List<BasePowerThermalRequest> request) throws Exception {
+		
+   	
+		return powerThermalInfrastructure.collectPowerThermalAll(request);
+		
+	}
+
+
+	@Override
+	public List<JobStatus> setPowerThermalCappingOnAll(SetPowerThermalAggRequest request) throws Exception {
+		
+		return powerThermalInfrastructure.setPowerThermalCappingOnAll(request);
+	}
+	
+	
+	
+	
+	
 
 }

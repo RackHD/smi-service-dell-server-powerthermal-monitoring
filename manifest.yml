@@ -1,0 +1,10 @@
+applications:
+- name: smi-powerthermal
+  memory: 1024M
+  health-check-type: port
+  stack: cflinuxfs2
+  env:
+    SPRING_PROFILES_ACTIVE: default
+  buildpack: java_buildpack
+  routes:
+  - route: smi-powerthermal

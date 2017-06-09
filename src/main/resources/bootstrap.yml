@@ -30,3 +30,5 @@ spring:
         format: YAML
         data-key: data
         fail-fast: true
+        
+   
