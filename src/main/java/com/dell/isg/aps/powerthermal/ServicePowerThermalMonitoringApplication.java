@@ -33,7 +33,6 @@ public class ServicePowerThermalMonitoringApplication {
         SpringApplication.run(ServicePowerThermalMonitoringApplication.class, args);
     }
 
-
     @Bean
     public Docket anewsApipi() {
         return new Docket(DocumentationType.SWAGGER_2).groupName("powerthermal").apiInfo(apiInfo()).select().paths(regex("/api.*")).build();
