@@ -6,7 +6,7 @@
  */
 package com.dell.isg.aps.powerthermal.controller.model;
 
-import com.dell.isg.aps.commons.model.common.CallBackRequest;
+import com.dell.isg.smi.commons.model.common.CallBackRequest;
 
 /**
  * @author rahman.muhammad

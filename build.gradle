@@ -16,10 +16,12 @@ def _url = 'http://support.dell.com'
 def _arch = 'x86_64'
 def _os = 'LINUX'
 def _release = 1
+def _sourcePaths=[]
 
 sourceCompatibility = 1.8
 version = "${version}"
-group = 'com.dell.isg.aps'
+dockerTag = "${dockerTag}"
+group = 'com.dell.isg.smi'
 
 buildscript {
 	ext {
@@ -86,11 +88,12 @@ repositories {
 
 
 dependencies {
-	compile 'com.dell.isg.aps:wsmanlib:1.0.30'
-	compile 'com.dell.isg.aps:wsmanclient:1.0.18'
-  	compile 'com.dell.isg.aps:commons-elm:1.0.35'
-	compile 'com.dell.isg.aps:commons-model:1.0.67'
-	compile 'com.dell.isg.aps:adapter-server:1.0.35'
+	compile 'com.dell.isg.smi:wsmanlib:+'
+	compile 'com.dell.isg.smi:wsmanclient:+'
+  	compile 'com.dell.isg.smi:commons-elm:+'
+	compile 'com.dell.isg.smi:commons-utilities:+'
+	compile 'com.dell.isg.smi:commons-model:+'
+	compile 'com.dell.isg.smi:adapter-server:+'
 	compile "org.springframework.boot:spring-boot-starter-web"
 	compile "org.springframework.boot:spring-boot-starter-tomcat"
     compile "org.springframework.boot:spring-boot-starter-actuator"
@@ -197,4 +200,38 @@ task generateDeb(type: Deb){
 	    into  '/etc/systemd/system'
     }
 	link('/etc/systemd/system/multi-user.target.wants/dell-powerthermal-monitoring.service', '/etc/systemd/system/dell-powerthermal-monitoring.service')
+}
+
+
+task buildSourcePathsArray(dependsOn: 'eclipseClasspath' ){
+	doLast{
+		def classpathFile = file('.classpath')
+		if( classpathFile.exists() ) {
+			def cpXml = new XmlParser().parse(classpathFile)
+			cpXml.classpathentry.each {
+				if('lib' == it.@kind ) {
+					if( it.@sourcepath == null ){
+						println 'missing source jar for:' + it.@path
+					}
+					else{
+					 	_sourcePaths.add(it.@sourcepath)
+					}
+				}
+			}
+		}
+		 
+		def arrayLength = _sourcePaths.size()
+		println 'sourcePaths length is:' + arrayLength
+	}
+}
+
+
+task dependencySourcesZip(type: Zip, dependsOn: 'buildSourcePathsArray' ) {
+	destinationDir = project.file('build/distributions')
+	destinationDir.mkdirs()
+	baseName = "smi-service-dell-server-powerthermal-monitoring-dependency-sources"
+	version = "${dockerTag}"
+	outputs.upToDateWhen { false }
+ 
+    from _sourcePaths
 }
