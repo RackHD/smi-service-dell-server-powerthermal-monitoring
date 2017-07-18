@@ -6,7 +6,7 @@ package com.dell.isg.aps.powerthermal.common;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.dell.isg.aps.commons.model.server.inventory.HwPowerMonitoring;
+import com.dell.isg.smi.commons.model.server.inventory.HwPowerMonitoring;
 
 /**
  * @author rahman.muhammad

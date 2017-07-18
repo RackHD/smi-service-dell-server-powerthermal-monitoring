@@ -25,12 +25,12 @@ import com.dell.isg.aps.powerthermal.common.SetPowerThermalAggRequest;
 import com.dell.isg.aps.powerthermal.common.SetPowerThermalRequest;
 import com.dell.isg.aps.powerthermal.util.ExtractValueUtil;
 import com.dell.isg.aps.powerthermal.util.PowerThermalTransformer;
-import com.dell.isg.aps.adapter.server.model.PowerMonitoring;
-import com.dell.isg.aps.adapter.server.model.WsmanCredentials;
-import com.dell.isg.aps.adapter.server.powerthermal.IPowerThermalAdapter;
-import com.dell.isg.aps.adapter.server.powerthermal.PowerThermalAdapterImpl;
-import com.dell.isg.aps.commons.model.server.JobStatus;
-import com.dell.isg.aps.commons.model.server.inventory.HwPowerMonitoring;
+import com.dell.isg.smi.adapter.server.model.PowerMonitoring;
+import com.dell.isg.smi.adapter.server.model.WsmanCredentials;
+import com.dell.isg.smi.adapter.server.powerthermal.IPowerThermalAdapter;
+import com.dell.isg.smi.adapter.server.powerthermal.PowerThermalAdapterImpl;
+import com.dell.isg.smi.commons.model.server.JobStatus;
+import com.dell.isg.smi.commons.model.server.inventory.HwPowerMonitoring;
 
 /**
  * @author rahman.muhammad

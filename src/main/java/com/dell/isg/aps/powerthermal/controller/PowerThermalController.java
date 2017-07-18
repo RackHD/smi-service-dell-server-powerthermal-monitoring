@@ -20,10 +20,10 @@ import com.dell.isg.aps.powerthermal.common.SetPowerThermalRequest;
 import com.dell.isg.aps.powerthermal.controller.exception.BadArgumentException;
 import com.dell.isg.aps.powerthermal.controller.model.Version;
 import com.dell.isg.aps.powerthermal.service.IPowerThermalService;
-import com.dell.isg.aps.commons.elm.exception.RuntimeCoreException;
-import com.dell.isg.aps.commons.elm.model.EnumErrorCode;
-import com.dell.isg.aps.commons.model.server.JobStatus;
-import com.dell.isg.aps.commons.model.server.inventory.HwPowerMonitoring;
+import com.dell.isg.smi.commons.elm.exception.RuntimeCoreException;
+import com.dell.isg.smi.commons.elm.model.EnumErrorCode;
+import com.dell.isg.smi.commons.model.server.JobStatus;
+import com.dell.isg.smi.commons.model.server.inventory.HwPowerMonitoring;
 
 @RestController
 

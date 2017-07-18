@@ -6,11 +6,11 @@
  */
 package com.dell.isg.aps.powerthermal.util;
 
-import com.dell.isg.aps.adapter.server.model.HeadRoom;
-import com.dell.isg.aps.adapter.server.model.PowerMonitoring;
-import com.dell.isg.aps.adapter.server.model.PowerStatistics;
-import com.dell.isg.aps.commons.elm.utilities.DateTimeUtils;
-import com.dell.isg.aps.commons.model.server.inventory.HwPowerMonitoring;
+import com.dell.isg.smi.adapter.server.model.HeadRoom;
+import com.dell.isg.smi.adapter.server.model.PowerMonitoring;
+import com.dell.isg.smi.adapter.server.model.PowerStatistics;
+import com.dell.isg.smi.commons.elm.utilities.DateTimeUtils;
+import com.dell.isg.smi.commons.model.server.inventory.HwPowerMonitoring;
 
 /**
  * @author rahman.muhammad

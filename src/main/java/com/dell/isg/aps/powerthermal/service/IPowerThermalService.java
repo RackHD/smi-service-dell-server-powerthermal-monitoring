@@ -13,8 +13,8 @@ import com.dell.isg.aps.powerthermal.common.SetPowerThermalRequest;
 
 import java.util.List;
 
-import com.dell.isg.aps.commons.model.server.JobStatus;
-import com.dell.isg.aps.commons.model.server.inventory.HwPowerMonitoring;
+import com.dell.isg.smi.commons.model.server.JobStatus;
+import com.dell.isg.smi.commons.model.server.inventory.HwPowerMonitoring;
 
 /**
  * @author rahman.muhammad

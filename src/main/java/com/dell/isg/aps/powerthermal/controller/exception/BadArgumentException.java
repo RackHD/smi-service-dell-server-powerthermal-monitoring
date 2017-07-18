@@ -8,7 +8,7 @@ package com.dell.isg.aps.powerthermal.controller.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import com.dell.isg.aps.commons.elm.exception.RuntimeCoreException;
+import com.dell.isg.smi.commons.elm.exception.RuntimeCoreException;
 
 /**
  * @author rahman.muhammad

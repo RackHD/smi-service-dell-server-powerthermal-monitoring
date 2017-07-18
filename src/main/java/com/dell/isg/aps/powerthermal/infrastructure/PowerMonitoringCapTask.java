@@ -8,9 +8,9 @@ package com.dell.isg.aps.powerthermal.infrastructure;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.dell.isg.aps.adapter.server.model.WsmanCredentials;
-import com.dell.isg.aps.adapter.server.powerthermal.IPowerThermalAdapter;
-import com.dell.isg.aps.commons.model.server.JobStatus;
+import com.dell.isg.smi.adapter.server.model.WsmanCredentials;
+import com.dell.isg.smi.adapter.server.powerthermal.IPowerThermalAdapter;
+import com.dell.isg.smi.commons.model.server.JobStatus;
 import com.dell.isg.aps.powerthermal.common.EnumDefinition;
 import com.dell.isg.aps.powerthermal.common.SetPowerThermalRequest;
 
