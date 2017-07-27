@@ -11,13 +11,14 @@ The microservice is available at dockerhub as a docker image to download and run
 
 ### How to Install 
 
-Under Construction. Docker container not yet published on DockerHub..... 
+A docker container for this service is available at: https://hub.docker.com/r/rackhd/dell-powerthermal-monitoring/
 
 -------------------------------------------------------------------
+~~~
 -sudo docker pull rackhd/dell-powerthermal-monitoring
 
 -sudo docker run rackhd/dell-powerthermal-monitoring 
-
+~~~
 These two commands will download and run microservice on port 46019 within Docker.  The microservice will make available REST APIs for power and thermal monitoring on Dell servers
 The microservice port can be mapped to a different port on hosting e.g. running a docker container on host with mapped ports. 
 
@@ -29,16 +30,13 @@ The microservice port can be mapped to a different port on hosting e.g. running 
 After the micro service is running, the service exposes REST APIs for consumption by your application or script.
 These REST API accept requests and return responses in the JSON format. 
 Swagger-UI based documentation has been added to the service and should be available for use when the service is up and running.
-
+~~~
 curl -X GET --header 'Accept: application/json' 'http://hostIP:8080/api/1.0/version'
+~~~
 
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{\ 
-   "serverAddress": "",\ 
-   "userName": "" ,\
-   "password": ""\ 
-
- }' 'http://HostIP:8080/api/1.0/powerthermal'
-
+~~~
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"serverAddress":"", "userName": "" , "password": ""}' 'http://<<HostIP>>:8080/api/1.0/powerthermal'
+~~~
 
  
 ### Setting Up A Development Environment 
