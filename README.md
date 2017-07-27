@@ -65,7 +65,16 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
    This build script will download the dependencies from central maven and start building the microservice 
    
   5- Run the jar as SpringBoot application 
+  
+  
+### Licensing
+This docker microservice is available under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.txt). 
 
+Source code for this microservice is available in repositories at https://github.com/RackHD.  
+
+The microservice makes use of dependent Jar libraries that may be covered by other licenses. In order to comply with the requirements of applicable licenses, the source for dependent libraries used by this microservice is available for download at:  https://bintray.com/rackhd/binary/download_file?file_path=smi-service-dell-server-powerthermal-monitoring-dependency-sources-devel.zip
+
+Additionally the binary and source jars for all dependent libraries are available for download on Maven Central.
 
 ### Support
 -------------------------------------------------------------------
