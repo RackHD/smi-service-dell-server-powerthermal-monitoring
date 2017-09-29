@@ -1,5 +1,6 @@
 ### smi-service-dell-powerthermal-monitoring
 
+Copyright © 2017 Dell Inc. or its subsidiaries.  All Rights Reserved. 
 
 ### Dell Server Power and Thermal Monitoring Microservice
 
